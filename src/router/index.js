@@ -2,6 +2,7 @@ import Vue from 'vue'
 import BootstrapVue from 'bootstrap-vue' // added
 import Router from 'vue-router'
 import HelloWorld from '@/components/HelloWorld'
+
 import test1 from '@/components/test1'
 import test2 from '@/components/test2'
 import test3 from '@/components/test3'
@@ -15,9 +16,9 @@ import 'bootstrap-vue/dist/bootstrap-vue.css' // added
 export default new Router({
   routes: [
     {
-      path: '/',
-      name: 'HelloWorld',
-      component: HelloWorld
+      path: '/', //パス指定
+      name: 'HelloWorld', //名前
+      component: HelloWorld //ここがファイルネーム
     },
     {
       path: '/test1',

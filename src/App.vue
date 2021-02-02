@@ -1,20 +1,22 @@
 <template>
-  <div id="app">
-    <myheader></myheader>
-    <profile2bar></profile2bar>
-    <img src="./assets/logo.png">
-    <router-view/>
-    <button class="btn btn-primary">test</button>
-  </div>
+<div id="app">
+  <myheader></myheader>
+  <profile2bar></profile2bar>
+  <img src="./assets/logo.png">
+  <router-view />
+  <button class="btn btn-primary">test</button>
+</div>
 </template>
 
 <script>
 import myheader from './components/myheader'
+import profile2bar from './components/profile2bar'
 
 export default {
   name: 'App',
   components: {
-    myheader
+    myheader,
+    profile2bar
   },
 }
 </script>

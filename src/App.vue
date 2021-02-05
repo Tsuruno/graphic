@@ -2,7 +2,6 @@
 <div id="app">
   <myheader></myheader>
   <profile2bar></profile2bar>
-  <img src="./assets/logo.png">
   <router-view />
   <button class="btn btn-primary">test</button>
 </div>

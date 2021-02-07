@@ -1,17 +1,18 @@
 <template>
 <div>
-  <div class="relative">
-    <b-img-lazy v-bind="barner" class="barner" :src="getImageUrl(80)" alt="barner"></b-img-lazy>
+  <div class="barner">
+    <b-img-lazy v-bind="barner" :src="getImageUrl(80)" alt="barner"></b-img-lazy>
     <div class="icon">
-      <b-img v-bind="waku" class="relative shadow-sm" rounded="circle" alt="waku"></b-img>
-      <b-img v-bind="waku2" class="waku2" rounded="circle" alt="waku"></b-img>
-      <img v-bind="me" class="me" src="../assets/icon.png" alt="me"></img>
+        <b-img v-bind="waku" class="relative shadow-sm" rounded="circle" alt="waku"></b-img>
+        <b-img v-bind="waku2" class="waku2" rounded="circle" alt="waku"></b-img>
+        <img v-bind="me" class="me" src="../assets/icon.png" alt="me">
+        <div class="prof">
+          <p class="font-weight-bold h4">Kota Tsuruno</p>
+          <p class="light h6">Developer & Graphic Designer & Producer</p>
+        </div>
     </div>
   </div>
-  <div class="text-center">
-    <p class="font-weight-bold h4">Kota Tsuruno</p>
-    <p class="light h6">Developer & Graphic Designer & Producer</p>
-  </div>
+
 </div>
 </template>
 
@@ -64,12 +65,12 @@ export default {
 
 .barner {
   position: relative;
-  margin-bottom: 95px;
+  margin-bottom: 100px;
 }
 
 .icon {
   position: absolute;
-  top: 120%;
+  top: 110%;
   left: 50%;
   transform: translateY(-50%) translateX(-50%);
   -webkit- transform: translateY(-50%) translateX(-50%);
@@ -85,5 +86,10 @@ export default {
   position: absolute;
   top: 15px;
   left: 15px;
+}
+
+.prof {
+  position: relative;
+  top: 80px;
 }
 </style>

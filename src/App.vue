@@ -2,6 +2,7 @@
 <div id="app">
   <myheader></myheader>
   <profile2bar></profile2bar>
+  <selectbutton></selectbutton>
   <router-view />
   <button class="btn btn-primary">test</button>
 </div>
@@ -10,13 +11,15 @@
 <script>
 import myheader from './components/myheader'
 import profile2bar from './components/profile2bar'
+import selectbutton from './components/selectbutton'
 
 export default {
   name: 'App',
   components: {
     myheader,
-    profile2bar
-  },
+    profile2bar,
+    selectbutton
+  }
 }
 </script>
 

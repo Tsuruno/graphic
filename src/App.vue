@@ -1,8 +1,8 @@
 <template>
 <div id="app">
-  <myheader></myheader>
-  <profile2bar></profile2bar>
-  <selectbutton></selectbutton>
+  <myheader />
+  <profile2bar />
+  <selectbutton />
   <router-view />
   <button class="btn btn-primary">test</button>
 </div>

@@ -1,44 +1,47 @@
 <template>
-<div>
-  <b-button-group>
-      <b-button
-        pill
-        v-bind="button"
-        v-for="(btn, idx) in buttons"
-        :key="idx"
-        :pressed.sync="btn.state"
-        variant="outline-secondary"
-      >
-        {{ btn.caption }}
-      </b-button>
-    </b-button-group>
-    <p>Pressed States: <strong>{{ btnStates }}</strong></p>
-    <router-link to="/test3">test3</router-link>
-</div>
+  <div>
+    <b-form-group
+      class="select"
+      v-slot="{ ariaDescribedby }"
+    >
+      <b-form-radio-group
+        v-model="selected"
+        :options="options"
+        :aria-describedby="ariaDescribedby"
+        @change="toPath"
+        button-variant="outline-primary"
+        name="radio-btn-outline"
+        buttons
+      ></b-form-radio-group>
+    </b-form-group>
+  </div>
 </template>
 
 <script>
 export default {
-  data() {
+  data () {
     return {
-      button: {
-        width: 100
-      },
-      buttons: [{
-          caption: 'artwork',
-          state: true,
-          to: "/test1"
+      selected: 'test1',
+      options: [
+        { text: 'artwork',
+          value: 'test1'
         },
-        {
-          caption: 'Production',
-          state: false
-        }]
+        { text: 'product',
+          value: 'test2'
+        }
+      ]
     }
   },
-  computed: {
-    btnStates() {
-      return this.buttons.map(btn => btn.state)
+  methods: {
+    toPath () {
+      this.$router.push({name: this.selected})
     }
   }
 }
 </script>
+
+<style>
+.select{
+  margin-right: 80%;
+}
+</style>

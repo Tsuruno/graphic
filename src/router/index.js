@@ -4,7 +4,7 @@ import Router from 'vue-router'
 import HelloWorld from '@/components/HelloWorld'
 import test1 from '@/components/test1'
 import test2 from '@/components/test2'
-import test3 from '@/components/test3'
+import info from '@/components/info'
 import 'bootstrap/dist/css/bootstrap.css' // added
 import 'bootstrap-vue/dist/bootstrap-vue.css' // added
 Vue.use(Router)
@@ -28,9 +28,9 @@ export default new Router({
       component: test2
     },
     {
-      path: '/test3',
-      name: 'test3',
-      component: test3
+      path: '/info',
+      name: 'info',
+      component: info
     }
   ]
 })

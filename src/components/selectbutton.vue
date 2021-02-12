@@ -1,9 +1,6 @@
 <template>
-  <div>
-    <b-form-group
-      class="select"
-      v-slot="{ ariaDescribedby }"
-    >
+  <div class='main'>
+    <b-form-group class="select" v-slot="{ ariaDescribedby }">
       <b-form-radio-group
         v-model="selected"
         :options="options"
@@ -14,6 +11,10 @@
         buttons
       ></b-form-radio-group>
     </b-form-group>
+    <b-button class='message'>
+      Message
+    </b-button>
+    <div class='clear' />
   </div>
 </template>
 
@@ -23,25 +24,37 @@ export default {
     return {
       selected: 'test1',
       options: [
-        { text: 'artwork',
-          value: 'test1'
-        },
-        { text: 'product',
-          value: 'test2'
-        }
+        { text: 'info', value: 'info' },
+        { text: 'artwork', value: 'test1' },
+        { text: 'product', value: 'test2' }
       ]
     }
   },
   methods: {
     toPath () {
-      this.$router.push({name: this.selected})
+      this.$router.push({ name: this.selected })
     }
   }
 }
 </script>
 
 <style>
-.select{
-  margin-right: 80%;
+
+.main {
+  padding: 10px;
+  margin: 0px 10px 0px 10px;
 }
+.select {
+  float: left;
+}
+
+.message {
+  float: right;
+}
+
+.clear{
+  clear: right;
+  clear: left;
+}
+
 </style>

@@ -12,6 +12,7 @@
       ></b-form-radio-group>
     </b-form-group>
     <b-button class='message'>
+      <font-awesome-icon icon="envelope" />
       Message
     </b-button>
     <div class='clear' />

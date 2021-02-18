@@ -1,7 +1,6 @@
 import Vue from 'vue'
 import BootstrapVue from 'bootstrap-vue' // added
 import Router from 'vue-router'
-import HelloWorld from '@/components/HelloWorld'
 import test1 from '@/components/test1'
 import test2 from '@/components/test2'
 import info from '@/components/info'
@@ -14,13 +13,8 @@ export default new Router({
   routes: [
     {
       path: '/',
-      name: 'HelloWorld',
-      component: HelloWorld
-    },
-    {
-      path: '/test1',
-      name: 'test1',
-      component: test1
+      name: 'info',
+      component: info
     },
     {
       path: '/test2',
@@ -28,9 +22,9 @@ export default new Router({
       component: test2
     },
     {
-      path: '/info',
-      name: 'info',
-      component: info
+      path: '/test1',
+      name: 'test1',
+      component: test1
     }
   ]
 })

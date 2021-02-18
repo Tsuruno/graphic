@@ -23,7 +23,7 @@
 export default {
   data () {
     return {
-      selected: 'test1',
+      selected: 'info',
       options: [
         { text: 'info', value: 'info' },
         { text: 'artwork', value: 'test1' },

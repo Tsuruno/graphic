@@ -26,7 +26,7 @@ export default {
       selected: 'info',
       options: [
         { text: 'info', value: 'info' },
-        { text: 'artwork', value: 'test1' },
+        { text: 'artwork', value: 'artwork' },
         { text: 'product', value: 'test2' }
       ]
     }

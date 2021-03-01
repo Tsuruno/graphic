@@ -1,7 +1,7 @@
 <template>
 <div>
   <div class="barner relative">
-    <b-img-lazy v-bind="barner" :src="getImageUrl (80)" alt="barner"></b-img-lazy>
+    <b-img-lazy v-bind="barner" :src="getImageUrl (70)" alt="barner"></b-img-lazy>
       <div class="icon absolute">
         <b-img v-bind="waku" class="relative shadow-sm" rounded="circle" alt="waku"></b-img>
         <b-img v-bind="waku2" class="absolute waku2" rounded="circle" alt="waku"></b-img>
@@ -23,7 +23,7 @@ export default {
         blank: true,
         blankColor: '#bbb',
         width: 600,
-        height: 100
+        height: 80
       },
       waku: {
         blank: true,

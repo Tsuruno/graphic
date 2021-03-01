@@ -1,9 +1,11 @@
 <template>
-<b-container fluid class="bv-example-row">
+<b-container fluid
+             class="bv-example-row">
   <b-row cols="12">
     <b-col>
       <div class="img_wrap">
-        <img class="img_size" src="../assets/artwork/namahamu.jpg" />
+        <img class="img_size"
+             src="../assets/artwork/namahamu.jpg" />
         <div class="mask">
           <div class="caption">flesh souse</div>
         </div>
@@ -11,7 +13,8 @@
     </b-col>
     <b-col>
       <div class="img_wrap">
-        <img class="img_size" src="../assets/artwork/namahamu.jpg" />
+        <img class="img_size"
+             src="../assets/artwork/namahamu.jpg"/>
         <div class="mask">
           <div class="caption">flesh souse</div>
         </div>
@@ -19,7 +22,8 @@
     </b-col>
     <b-col>
       <div class="img_wrap">
-        <img class="img_size" src="../assets/artwork/namahamu.jpg" />
+        <img class="img_size"
+             src="../assets/artwork/namahamu.jpg" />
         <div class="mask">
           <div class="caption">flesh souse</div>
         </div>
@@ -30,23 +34,30 @@
 </template>
 
 <script>
-// new Vue({
-//   el: "#app",
-//   data: {
-//     counter: 0,
-//     list: ["Apple", "Banana", "Strawberry"]
-//   },
-//   computed: {
-//     length: function() {
-//       return this.list.length;
-//     }
-//   },
-//   methods: {
-//     addItem: function() {
-//       this.list.push("Orange" + (++this.counter).toString());
-//     }
-//   }
-// });
+export default {
+  data () {
+    return {
+      me: {
+        width: 100,
+        height: 100
+      }
+    }
+  },
+  created : function(){
+    this.message = 'Hello Vue'
+    console.log('created')
+    console.log(this)
+  },
+  methods: {
+    getImageUrl (imageId) {
+      const {
+        width,
+        height
+      } = this.barner
+      return `https://picsum.photos/${width}/${height}/?image=${imageId}`
+    }
+  }
+}
 </script>
 
 <style>

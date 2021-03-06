@@ -1,8 +1,8 @@
 <template>
 <b-container fluid
              class="bv-example-row">
-  <b-row cols="12">
-    <b-col>
+  <b-row cols="3">
+    <!-- <b-col>
       <div class="img_wrap">
         <img class="img_size"
              src="../assets/artwork/namahamu.jpg" />
@@ -10,22 +10,15 @@
           <div class="caption">flesh souse</div>
         </div>
       </div>
-    </b-col>
-    <b-col>
-      <div class="img_wrap">
-        <img class="img_size"
-             src="../assets/artwork/namahamu.jpg"/>
-        <div class="mask">
-          <div class="caption">flesh souse</div>
-        </div>
-      </div>
-    </b-col>
-    <b-col>
+    </b-col> -->
+
+    <b-col v-for="user in users"
+           :key="user.id">
       <div class="img_wrap">
         <img class="img_size"
              src="../assets/artwork/namahamu.jpg" />
         <div class="mask">
-          <div class="caption">flesh souse</div>
+          <div class="caption">{{user.name}}{{ user.email }}{{ user.website }}<</div>
         </div>
       </div>
     </b-col>
@@ -34,28 +27,18 @@
 </template>
 
 <script>
+import axios from 'axios'
 export default {
-  data () {
+  data() {
     return {
-      me: {
-        width: 100,
-        height: 100
-      }
+      message: 'Search/Filter In Table',
+      users: []
     }
   },
-  created : function(){
-    this.message = 'Hello Vue'
-    console.log('created')
+  mounted() {
+    axios.get('https://jsonplaceholder.typicode.com/users')
+      .then(response => this.users = response.data)
     console.log(this)
-  },
-  methods: {
-    getImageUrl (imageId) {
-      const {
-        width,
-        height
-      } = this.barner
-      return `https://picsum.photos/${width}/${height}/?image=${imageId}`
-    }
   }
 }
 </script>
@@ -101,5 +84,22 @@ b-col {}
 .img_wrap:hover .mask {
   opacity: 1;
   /* マスクを表示する */
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%
+}
+
+td,
+th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+th {
+  color: white;
+  background-color: #1E90FF;
 }
 </style>

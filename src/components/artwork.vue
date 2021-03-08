@@ -18,7 +18,7 @@
         <img class="img_size"
              src="../assets/artwork/namahamu.jpg" />
         <div class="mask">
-          <div class="caption">{{user.name}}{{ user.email }}{{ user.website }}<</div>
+          <div class="caption">{{user.name}}{{ user.email }}{{ user.website }}</div>
         </div>
       </div>
     </b-col>
@@ -31,7 +31,6 @@ import axios from 'axios'
 export default {
   data() {
     return {
-      message: 'Search/Filter In Table',
       users: []
     }
   },
@@ -44,8 +43,6 @@ export default {
 </script>
 
 <style>
-b-col {}
-
 .img_size {
   width: 100%;
   height: auto;
@@ -84,22 +81,5 @@ b-col {}
 .img_wrap:hover .mask {
   opacity: 1;
   /* マスクを表示する */
-}
-
-table {
-  border-collapse: collapse;
-  width: 100%
-}
-
-td,
-th {
-  border: 1px solid #dddddd;
-  text-align: left;
-  padding: 8px;
-}
-
-th {
-  color: white;
-  background-color: #1E90FF;
 }
 </style>

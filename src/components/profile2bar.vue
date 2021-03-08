@@ -23,7 +23,7 @@ export default {
         blank: true,
         blankColor: '#bbb',
         width: 600,
-        height: 80
+        height: 140
       },
       waku: {
         blank: true,

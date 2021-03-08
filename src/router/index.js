@@ -13,8 +13,8 @@ export default new Router({
   routes: [
     {
       path: '/',
-      name: 'info',
-      component: info
+      name: 'artwork',
+      component: artwork
     },
     {
       path: '/test2',
@@ -22,9 +22,9 @@ export default new Router({
       component: test2
     },
     {
-      path: '/artwork',
-      name: 'artwork',
-      component: artwork
+      path: '/info',
+      name: 'info',
+      component: info
     }
   ]
 })

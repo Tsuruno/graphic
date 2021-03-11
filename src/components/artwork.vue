@@ -2,24 +2,17 @@
 <b-container fluid
              class="bv-example-row">
   <b-row cols="3">
-    <!-- <b-col>
+    <b-col v-for="obj in objects"
+           :key="obj.id">
       <div class="img_wrap">
+        <a href="#">
         <img class="img_size"
-             src="../assets/artwork/namahamu.jpg" />
+             :src='`https://raw.githubusercontent.com/Tsuruno/PhotoMaterial/master/resizeImg/${obj.dir}`'
+             :alt="obj.name"/>
         <div class="mask">
-          <div class="caption">flesh souse</div>
+          <div class="caption">{{obj.name}}</div>
         </div>
-      </div>
-    </b-col> -->
-
-    <b-col v-for="user in users"
-           :key="user.id">
-      <div class="img_wrap">
-        <img class="img_size"
-             src="../assets/artwork/namahamu.jpg" />
-        <div class="mask">
-          <div class="caption">{{user.name}}{{ user.email }}{{ user.website }}</div>
-        </div>
+      </a>
       </div>
     </b-col>
   </b-row>
@@ -31,12 +24,12 @@ import axios from 'axios'
 export default {
   data() {
     return {
-      users: []
+      objects: []
     }
   },
   mounted() {
-    axios.get('https://jsonplaceholder.typicode.com/users')
-      .then(response => this.users = response.data)
+    axios.get('https://raw.githubusercontent.com/Tsuruno/PhotoMaterial/master/data.json')
+      .then(response => this.objects = response.data)
     console.log(this)
   }
 }
@@ -45,7 +38,9 @@ export default {
 <style>
 .img_size {
   width: 100%;
-  height: auto;
+  height: 300px;
+  margin: auto;
+  object-fit: cover;
 }
 
 .img_wrap {

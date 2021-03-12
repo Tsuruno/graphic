@@ -6,13 +6,13 @@
            :key="obj.id">
       <div class="img_wrap">
         <a href="#">
-        <img class="img_size"
-             :src='`https://raw.githubusercontent.com/Tsuruno/PhotoMaterial/master/resizeImg/${obj.dir}`'
-             :alt="obj.name"/>
-        <div class="mask">
-          <div class="caption">{{obj.name}}</div>
-        </div>
-      </a>
+          <img class="img_size"
+               :src='`https://raw.githubusercontent.com/Tsuruno/PhotoMaterial/master/resizeImg/${obj.dir}`'
+               :alt="obj.name" />
+          <div class="mask">
+            <div class="caption">{{obj.name}}</div>
+          </div>
+        </a>
       </div>
     </b-col>
   </b-row>

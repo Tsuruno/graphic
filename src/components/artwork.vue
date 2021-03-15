@@ -1,11 +1,14 @@
 <template>
 <b-container fluid
              class="bv-example-row">
-  <b-row cols="3">
+  <b-row cols="2"
+         cols-sm="2"
+         cols-md="3"
+         cols-lg="4">
     <b-col v-for="obj in objects"
            :key="obj.id">
       <div class="img_wrap">
-        <a href="#">
+        <a v-on:click='showModal = true'>
           <img class="img_size"
                :src='`https://raw.githubusercontent.com/Tsuruno/PhotoMaterial/master/resizeImg/${obj.dir}`'
                :alt="obj.name" />
@@ -13,6 +16,8 @@
             <div class="caption">{{obj.name}}</div>
           </div>
         </a>
+        <modal v-if="showModal"
+               @close="showModal = false"></modal>
       </div>
     </b-col>
   </b-row>
